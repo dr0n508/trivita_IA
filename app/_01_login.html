@@ -1,0 +1,138 @@
+<main class="main page-login">
+	<div class="container">
+		<div class="row no-gutters main-block-home-page">
+
+			<div class="col-md-6 col-sm-12">
+				<div class="video-to-modal home-page-video mobile-hide">
+					<img src="img/bg-for-video.jpg" alt="video placeholder">
+					<a href="#" class="inner-video-btn modal-trigger" data-modal="modal-video">
+						<span class="icon-play-video"><span class="path1"></span><span class="path2"></span></span>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+				<div class="inner-wrapper">
+					<header class="header-content">
+						<h2 class="title-content">Start Now</h2>
+					</header>
+
+					<div class="inner-content">
+						<div class="video-to-modal rounded mobile-visible">
+							<img src="img/bg-for-video.jpg" alt="video placeholder">
+							<a href="#" class="inner-video-btn modal-trigger" data-modal="modal-video">
+								<span class="icon-play-video"><span class="path1"></span><span class="path2"></span></span>
+							</a>
+						</div>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra diam
+							vel eros vulputate iaculis. In dictum metuset orci consectetur blandit. Donec
+							vel mi non lorem venenatis tempor. Quisque consequat lorem ac ullamcorper
+							maximus. Donec aliquet arcu felis, sed mollis lorem iaculis id.
+						</p>
+
+						<form action="#">
+							<label class="label-input" for="first_name">First name</label>
+							<div class="custom-input">
+								<input type="text" name="first_name" id="first_name">
+							</div>
+
+							<label class="label-input" for="last_name">Last name</label>
+							<div class="custom-input">
+								<input type="text" name="last_name" id="last_name">
+							</div>
+
+							<label class="label-input" for="email_new">Email</label>
+							<div class="custom-input">
+								<input type="email" name="email_new" id="email_new">
+							</div>
+
+							<button type="submit" class="btn-wide primary">Let's Go!</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal login -->
+	<div class="modal" id="modal-login">
+		<div class="modal-sandbox"></div>
+		<div class="modal-box">
+			<div class="modal-body">
+				<h1 class="modal-header">Log in</h1>
+
+				<span class="message-err">Email or Passwor are incorrect. Please, try again.</span>
+
+				<form action="#">
+					<label class="label-input">Email</label>
+					<div class="custom-input error">
+						<input type="email" name="email-login" id="email-login">
+					</div>
+
+					<label class="label-input">Password</label>
+					<div class="custom-input error">
+						<input type="password" name="password">
+						<span class="icon-visible off"></span>
+					</div>
+
+					<div class="forgot-pass-block">
+						<input type="checkbox" class="custom-checkbox login-checkbox" id="remember_me" name="remember_me" value="yes">
+						<label class="label-input" for="remember_me">Remember me</label>
+						<a href="#" class="auth-forget modal-trigger" data-modal="modal-forgot-password">Forgot password?</a>
+					</div>
+
+					<button type="submit" class="btn-wide primary">Continue</button>
+				</form>
+				<div class="close-modal">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal forgot password-->
+	<div class="modal" id="modal-forgot-password">
+		<div class="modal-sandbox"></div>
+		<div class="modal-box">
+			<div class="modal-body">
+				<h1 class="modal-header">Forgot password?</h1>
+				<p class="modal-text">Please enter your email below. You will receive a link to reset tour password.</p>
+				<form action="#">
+
+					<label class="label-input">Email</label>
+					<div class="custom-input">
+						<input type="email" name="email-reset-pass" id="email-reset-pass">
+					</div>
+
+					<button type="submit" class="btn-wide primary">Reset Password</button>
+				</form>
+				<div class="close-modal">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal video -->
+	<div class="modal" id="modal-video">
+		<div class="modal-sandbox"></div>
+		<div class="modal-box">
+			<div class="modal-body modal-video">
+				<div class="col-1-2">
+					<div class="videoWrapper">
+						<iframe src="https://player.vimeo.com/video/402717424?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+
+				<div class="close-modal" id="close-btn">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</main>

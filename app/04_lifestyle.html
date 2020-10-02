@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Home</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<meta name="description" content="Home page">
+
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+	<!-- Template Basic Images End -->
+
+	<!-- Custom Browsers Color -->
+	<meta name="theme-color" content="#3a66c7">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="css/main.min.css?v6">
+</head>
+<body>
+	<header class="main-header">
+	<div class="container">
+		<a class="logo" href="index.html">
+			<img src="img/logo.png" alt="logo">
+		</a>
+		<div class="menu_wrap">
+			<div class="menu_content">
+				<ul class="nav">
+					<li class="nav_item has_child">
+						Welcome Bob
+						<span class="icon-chevron-down-solid"></span>
+						<ul class="sub_menu">
+							<li class="sub_menu_item"><a href="#">Log out</a></li>
+							<li class="sub_menu_item"><a href="#">Option one</a></li>
+							<li class="sub_menu_item"><a href="#">Option two</a></li>
+							<li class="sub_menu_item"><a href="#">Option three</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+	<main class="main page-lifestyle">
+	<div class="container">
+
+		<div class="steps-wrapper">
+			<a class="button-labeled left md-hide" href="#">
+				<i class="icon icon-arrow-left-solid"></i>
+				Back
+			</a>
+
+			<div class="progress-bar">
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Start</p>
+				</div>
+
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Step 2</p>
+				</div>
+
+				<div class="step active">
+					<div class="bullet active">
+						<span></span>
+						<div class="check icon-check-solid active"></div>
+					</div>
+					<p>Step 3</p>
+				</div>
+
+				<div class="step">
+					<div class="bullet">
+						<span></span>
+						<div class="check icon-check-solid"></div>
+					</div>
+					<p>Finish</p>
+				</div>
+			</div>
+
+			<a class="button-labeled accent right md-hide" href="#">
+				Next
+				<i class="icon icon-arrow-right-solid"></i>
+			</a>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 col-lg-7">
+				<p class="accent-paragraph">Asymptomatic lifestyle-related conditions are known to cause chronic inflammation. The term
+					asymptomatic means there are no symptoms associated with the risk factors. Over time, these
+					types of conditions increase the incidence of chronic inflammation and exist long before you
+					have any indication of chronic illness.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<section class="form-block col-lg-12">
+				<div class="inner-wrapper rounded">
+					<header class="header-content">
+						<h2 class="title-content">Lifestyle</h2>
+					</header>
+					<div class="inner-content">
+						<form action="">
+
+							<div class="form-row border slim">
+								<p>
+									<span class="bold">1. How many times per week do you exercise 30 minutes or more?</span>
+									(walking, jogging, hiking, yoga, bicycling, treadmill, resistance, etc)
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column50">
+										<input type="radio" id="lifestyle_q1_5_7_days" name="lifestyle_q1" value="5_7_days">
+										<label for="lifestyle_q1_5_7_days">5-7 Days</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q1_2_3_days" name="lifestyle_q1" value="2_3_days" checked>
+										<label for="lifestyle_q1_2_3_days">2-3 Days</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q1_1day" name="lifestyle_q1" value="one_day">
+										<label for="lifestyle_q1_1day">1 Day</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q1_none" name="lifestyle_q1" value="none">
+										<label for="lifestyle_q1_none">none</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row border slim">
+								<p>
+									<span class="bold">2. Do you snore?</span>
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column50">
+										<input type="radio" id="lifestyle_q2_no" name="lifestyle_q2" value="no" checked>
+										<label for="lifestyle_q2_no">No</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q2_occasionally" name="lifestyle_q2" value="occasionally" >
+										<label for="lifestyle_q2_occasionally">Occasionally</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q2_most_of_time" name="lifestyle_q2" value="most_of_time">
+										<label for="lifestyle_q2_most_of_time">Most of The Time</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q2_sleep_apnea" name="lifestyle_q2" value="sleep_apnea">
+										<label for="lifestyle_q2_sleep_apnea">Sleep Apnea</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row border slim">
+								<p>
+									<span class="bold">3. How much time are you sitting during waking hours?</span>
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column50">
+										<input type="radio" id="lifestyle_q3_min6" name="lifestyle_q3" value="min6" checked>
+										<label for="lifestyle_q3_min6">< 6 Hours</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q3_7_8" name="lifestyle_q3" value="7_8" >
+										<label for="lifestyle_q3_7_8">7-8 Hours</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q3_9_10" name="lifestyle_q3" value="9_10">
+										<label for="lifestyle_q3_9_10">9-10 Hours</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q3_more11" name="lifestyle_q3" value="more11">
+										<label for="lifestyle_q3_more11">11+ Hours</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row border slim">
+								<p>
+									<span class="bold">4. How much pure water do you drink per day?</span>
+									(not including tap water, tea, coffee, juice or any flavored drinks)
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column50">
+										<input type="radio" id="lifestyle_q4_more64" name="lifestyle_q4" value="more64" checked>
+										<label for="lifestyle_q4_more64">> 64 oz</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q4_32" name="lifestyle_q4" value="32" >
+										<label for="lifestyle_q4_32">32 oz</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q4_16" name="lifestyle_q4" value="16">
+										<label for="lifestyle_q4_16">
+											16 oz
+											<span>1 / week</span>
+										</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q4_less11" name="lifestyle_q4" value="less11">
+										<label for="lifestyle_q4_less11">
+											< 16 oz
+											<span>More then 1 / week</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row border slim">
+								<p>
+									<span class="bold">5. Do you drink 2 or more alcoholic beverages per day?</span>
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column25">
+										<input type="radio" id="lifestyle_q5_no" name="lifestyle_q5" value="no" checked>
+										<label for="lifestyle_q5_no">No</label>
+									</div>
+
+									<div class="column25">
+										<input type="radio" id="lifestyle_q5_yes" name="lifestyle_q5" value="yes" >
+										<label for="lifestyle_q5_yes">Yes</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row border slim">
+								<p>
+									<span class="bold">6. Do you smoke?</span>
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column50">
+										<input type="radio" id="lifestyle_q6_never" name="lifestyle_q6" value="never" checked>
+										<label for="lifestyle_q6_never">Never</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q6_quit_5more" name="lifestyle_q6" value="quit_5more" >
+										<label for="lifestyle_q6_quit_5more">Quit > 5 years</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q6_quit_5less" name="lifestyle_q6" value="quit_5less" >
+										<label for="lifestyle_q6_quit_5less">Quit < 5 years</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q6_smoke" name="lifestyle_q6" value="smoke" >
+										<label for="lifestyle_q6_smoke">Currently smoke</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row border slim">
+								<p>
+									<span class="bold">7. Are you around other smokers or live in a home with a smoker?</span>
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column50">
+										<input type="radio" id="lifestyle_q7_never" name="lifestyle_q7" value="never" checked>
+										<label for="lifestyle_q7_never">Never</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q7_sometimes" name="lifestyle_q7" value="sometimes" >
+										<label for="lifestyle_q7_sometimes">Sometimes</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q7_often" name="lifestyle_q7" value="often" >
+										<label for="lifestyle_q7_often">Often</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q7_always" name="lifestyle_q7" value="always" >
+										<label for="lifestyle_q7_always">Always</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row border slim">
+								<p>
+									<span class="bold">8. How would you rate your day to day stress level?</span>
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column50">
+										<input type="radio" id="lifestyle_q8_never" name="lifestyle_q8" value="never" checked>
+										<label for="lifestyle_q8_never">Never</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q8_low" name="lifestyle_q8" value="low" >
+										<label for="lifestyle_q8_low">Low</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q8_moderate" name="lifestyle_q8" value="moderate" >
+										<label for="lifestyle_q8_moderate">Moderate</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q8_high" name="lifestyle_q8" value="high" >
+										<label for="lifestyle_q8_high">High</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row border slim">
+								<p>
+									<span class="bold">9. When did you last see your Primary Care Provider for an annual physical?</span>
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column50">
+										<input type="radio" id="lifestyle_q9_less12" name="lifestyle_q9" value="less12" checked>
+										<label for="lifestyle_q9_less12">< 12 Months</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q9_less24" name="lifestyle_q9" value="less24" >
+										<label for="lifestyle_q9_less24">< 24 Months</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q9_less36" name="lifestyle_q9" value="less36" >
+										<label for="lifestyle_q9_less36">< 36 Months</label>
+									</div>
+
+									<div class="column50">
+										<input type="radio" id="lifestyle_q9_more36" name="lifestyle_q9" value="more36" >
+										<label for="lifestyle_q9_more36">> 36 Months</label>
+									</div>
+								</div>
+							</div>
+
+
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="steps-wrapper steps-block-btn-mobile">
+			<a class="button-labeled left" href="#">
+				<i class="icon icon-arrow-left-solid"></i>
+				Back
+			</a>
+			<a class="button-labeled accent right" href="#">
+				Next
+				<i class="icon icon-arrow-right-solid"></i>
+			</a>
+		</div>
+	</div>
+
+
+</main>
+	<footer class="main-footer">
+	<div class="container">
+		<div class="inner-wrapper-footer">
+			<ul class="footer-menu-left">
+				<li class="menu-item"><a href="#">Brought <br> to you by</a></li>
+				<li class="divider"></li>
+				<li class="menu-item">
+					<a href="#">
+						<img src="img/logo-footer.png" alt="trivita clinic logo">
+					</a>
+				</li>
+			</ul>
+			<ul class="footer-menu-right">
+				<li><a href="#">Priivacy policy</a></li>
+				<li><a href="#">Terms & conditions</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+	<script src="libs/jquery/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

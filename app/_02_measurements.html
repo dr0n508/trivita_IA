@@ -1,0 +1,162 @@
+<main class="main page-measurements">
+	<div class="container">
+		<div class="steps-wrapper">
+			<a class="button-labeled disabled left md-hide" href="#">
+				<i class="icon icon-arrow-left-solid"></i>
+				Back
+			</a>
+
+			<div class="progress-bar">
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Start</p>
+				</div>
+
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Step 2</p>
+				</div>
+
+				<div class="step active">
+					<div class="bullet active">
+						<span></span>
+						<div class="check icon-check-solid active"></div>
+					</div>
+					<p>Step 3</p>
+				</div>
+
+				<div class="step">
+					<div class="bullet">
+						<span></span>
+						<div class="check icon-check-solid"></div>
+					</div>
+					<p>Finish</p>
+				</div>
+			</div>
+
+			<a class="button-labeled accent right md-hide" href="#">
+				Next
+				<i class="icon icon-arrow-right-solid"></i>
+			</a>
+		</div>
+
+		<div class="row">
+			<section class="video-section col-md-12 col-lg-7 ">
+				<div class="inner-wrapper rounded">
+					<header class="header-content">
+						<h2 class="title-content">Video Title Example</h2>
+					</header>
+
+					<div class="inner-content d-flex flex-md-column flex-column-reverse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra diam vel eros
+							vulputate iaculis. In dictum metuset orci consectetur blandit. Donec vel mi non lorem
+							venenatis tempor. Quisque consequat lorem ac ullamcorper maximus. Donec aliquet arcu felis,
+							sed mollis lorem iaculis id.
+						</p>
+
+						<div class="video-to-modal rounded">
+							<img src="img/video-placeholder.jpg" alt="video placeholder">
+							<a href="#" class="inner-video-btn modal-trigger" data-modal="modal-video">
+								<span class="icon-play-video"><span class="path1"></span><span class="path2"></span></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="form-block col-md-12 col-lg-5 ">
+				<div class="inner-wrapper rounded">
+					<header class="header-content">
+						<h2 class="title-content">Your Stats</h2>
+					</header>
+					<div class="inner-content">
+						<form action="">
+							<label class="label-input">Gender:</label>
+							<div class="radio-toolbar double-input">
+								<div class="column50">
+									<input type="radio" id="gender_male" name="gender" value="male">
+									<label for="gender_male">Male</label>
+								</div>
+
+								<div class="column50">
+									<input type="radio" id="gender_female" name="gender" value="female" checked>
+									<label for="gender_female">Female</label>
+								</div>
+							</div>
+
+							<label class="label-input">Height:</label>
+							<span class="tooltip-q icon-question-circle-solid" title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!"></span>
+							<div class="double-input">
+								<div class="column50">
+									<div class="custom-input">
+										<input type="number" name="height_ft" id="height_ft" placeholder="Ft.">
+									</div>
+								</div>
+								<div class="column50">
+									<div class="custom-input">
+										<input type="number" name="height_in" id="height_in" placeholder="In.">
+									</div>
+								</div>
+							</div>
+
+							<div class="double-input">
+								<div class="column50">
+									<label class="label-input">Waist:</label>
+									<span class="tooltip-q icon-question-circle-solid" title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!"></span>
+									<div class="custom-input">
+										<input type="number" name="waist_in" id="waist_in" placeholder="In.">
+									</div>
+								</div>
+								<div class="column50">
+									<label class="label-input">Weight:</label>
+									<span class="tooltip-q icon-question-circle-solid" title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!"></span>
+									<div class="custom-input">
+										<input type="number" name="weight_lbs" id="weight_lbs" placeholder="Lbs.">
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="btn-wide primary">Next</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="md-visible">
+			<div class="steps-wrapper steps-block-btn-mobile">
+				<a class="button-labeled disabled left" href="#">
+					<i class="icon icon-arrow-left-solid"></i>
+					Back
+				</a>
+				<a class="button-labeled accent right" href="#">
+					Next
+					<i class="icon icon-arrow-right-solid"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal video -->
+	<div class="modal" id="modal-video">
+		<div class="modal-sandbox"></div>
+		<div class="modal-box">
+			<div class="modal-body modal-video">
+				<div class="col-1-2">
+					<div class="videoWrapper">
+						<iframe src="https://player.vimeo.com/video/402717424?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="close-modal" id="close-btn">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</main>

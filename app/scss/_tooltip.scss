@@ -1,0 +1,16 @@
+.tooltip-q {
+  color: #dddddd;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tooltip {
+  position:absolute;
+  padding: 10px;
+  background-color:white;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 200px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}

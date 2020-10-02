@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Home</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<meta name="description" content="Home page">
+
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+	<!-- Template Basic Images End -->
+
+	<!-- Custom Browsers Color -->
+	<meta name="theme-color" content="#3a66c7">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="css/main.min.css?v5">
+</head>
+<body>
+	<header class="main-header">
+	<div class="container">
+		<a class="logo" href="index.html">
+			<img src="img/logo.png" alt="logo">
+		</a>
+		<div class="menu_wrap">
+			<div class="menu_content">
+				<ul class="nav">
+					<li class="nav_item has_child">
+						Welcome Bob
+						<span class="icon-chevron-down-solid"></span>
+						<ul class="sub_menu">
+							<li class="sub_menu_item"><a href="#">Log out</a></li>
+							<li class="sub_menu_item"><a href="#">Option one</a></li>
+							<li class="sub_menu_item"><a href="#">Option two</a></li>
+							<li class="sub_menu_item"><a href="#">Option three</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+	<main class="main page-nutrition">
+	<div class="container">
+
+		<div class="steps-wrapper">
+			<a class="button-labeled left md-hide" href="#">
+				<i class="icon icon-arrow-left-solid"></i>
+				Back
+			</a>
+
+			<div class="progress-bar">
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Start</p>
+				</div>
+
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Step 2</p>
+				</div>
+
+				<div class="step active">
+					<div class="bullet active">
+						<span></span>
+						<div class="check icon-check-solid active"></div>
+					</div>
+					<p>Step 3</p>
+				</div>
+
+				<div class="step">
+					<div class="bullet">
+						<span></span>
+						<div class="check icon-check-solid"></div>
+					</div>
+					<p>Finish</p>
+				</div>
+			</div>
+
+			<a class="button-labeled accent right md-hide" href="#">
+				Next
+				<i class="icon icon-arrow-right-solid"></i>
+			</a>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 col-lg-7">
+				<p class="accent-paragraph">Asymptomatic lifestyle-related conditions are known to cause chronic inflammation. The term
+					asymptomatic means there are no symptoms associated with the risk factors. Over time, these
+					types of conditions increase the incidence of chronic inflammation and exist long before you
+					have any indication of chronic illness.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<section class="form-block col-lg-12">
+				<div class="inner-wrapper rounded">
+					<header class="header-content">
+						<h2 class="title-content">Nutrition</h2>
+					</header>
+					<div class="inner-content">
+						<form action="">
+
+							<div class="form-row">
+								<p>
+									<span class="bold">1. Do you limit the amount of carbohydrates and sugar you consume?</span>
+									(bread, pasta, dried fruit, potatoes, cereal, beer, sweetened foods, fruit, syrups, honey, juice, dressings, candy, etc)
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column">
+										<input type="radio" id="nutrition_q1_always" name="nutrition_q1" value="Always">
+										<label for="nutrition_q1_always">Male</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q1_most_of_the_time" name="nutrition_q1" value="most_of_the_time" checked>
+										<label for="nutrition_q1_most_of_the_time">Most of the Time</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q1_sometimes" name="nutrition_q1" value="sometimes">
+										<label for="nutrition_q1_sometimes">Sometimes</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q1_never" name="nutrition_q1" value="never">
+										<label for="nutrition_q1_never">Never</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<p>
+									<span class="bold">2. Do you limit the amount of the saturated fats you consume?</span>
+									(Deep fried foods, processed meats, cheese, whole milk, ice cream, etc)
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column">
+										<input type="radio" id="nutrition_q2_always" name="nutrition_q2" value="Always" checked>
+										<label for="nutrition_q2_always">Male</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q2_most_of_the_time" name="nutrition_q2" value="most_of_the_time" >
+										<label for="nutrition_q2_most_of_the_time">Most of the Time</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q2_sometimes" name="nutrition_q2" value="sometimes">
+										<label for="nutrition_q2_sometimes">Sometimes</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q2_never" name="nutrition_q2" value="never">
+										<label for="nutrition_q2_never">Never</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<p>
+									<span class="bold">3. Do you drink diet or sugary soft drinks?</span>
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column">
+										<input type="radio" id="nutrition_q3_never" name="nutrition_q3" value="never">
+										<label for="nutrition_q3_never">Never</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q3_rarely" name="nutrition_q3" value="rarely">
+										<label for="nutrition_q3_rarely">Rarely</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q3_sometimes" name="nutrition_q3" value="sometimes">
+										<label for="nutrition_q3_sometimes">
+											Sometimes
+											<span>1/week</span>
+										</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q3_regularly" name="nutrition_q3" value="regularly" checked>
+										<label for="nutrition_q3_regularly">
+											Regularly
+											<span>More then 1 / week</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<p>
+									<span class="bold">4. Do you eat processed or packaged meats</span>
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column">
+										<input type="radio" id="nutrition_q4_never" name="nutrition_q4" value="never" >
+										<label for="nutrition_q4_never">Never</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q4_rarely" name="nutrition_q4" value="rarely" checked>
+										<label for="nutrition_q4_rarely">Rarely</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q4_sometimes" name="nutrition_q4" value="sometimes">
+										<label for="nutrition_q4_sometimes">
+											Sometimes
+											<span>1/week</span>
+										</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q4_regularly" name="nutrition_q4" value="regularly">
+										<label for="nutrition_q4_regularly">
+											Regularly
+											<span>More then 1 / week</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<p>
+									<span class="bold">5. Do you eat any processed food?</span>
+									(All foods in a package with the exception of fresh or fresh, frozen, whole foods)
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column">
+										<input type="radio" id="nutrition_q5_20" name="nutrition_q5" value="20" checked>
+										<label for="nutrition_q5_20">< 20%</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q5_20_40" name="nutrition_q5" value="20_40" >
+										<label for="nutrition_q5_20_40">20%-40% </label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q5_40_60" name="nutrition_q5" value="40_60">
+										<label for="nutrition_q5_40_60">40%-60%</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q5_60" name="nutrition_q5" value="60">
+										<label for="nutrition_q5_60">60%</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<p>
+									<span class="bold">6. Number of servings of fresh fruits and vegetables per day</span>
+									(bread, pasta, dried fruit, potatoes, cereal, beer, sweetened foods, fruit, syrups, honey, juice, dressings, candy, etc)
+								</p>
+
+								<div class="radio-toolbar double-input">
+									<div class="column">
+										<input type="radio" id="nutrition_q6_more_5" name="nutrition_q6" value="more5">
+										<label for="nutrition_q6_more_5">More than 5</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q6_less_5" name="nutrition_q6" value="less5" checked>
+										<label for="nutrition_q6_less_5">Less than 5</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q6_less_2" name="nutrition_q6" value="less2">
+										<label for="nutrition_q6_less_2">Less than 2</label>
+									</div>
+
+									<div class="column">
+										<input type="radio" id="nutrition_q6_never" name="nutrition_q6" value="never">
+										<label for="nutrition_q6_never">Never</label>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="steps-wrapper steps-block-btn-mobile">
+			<a class="button-labeled left" href="#">
+				<i class="icon icon-arrow-left-solid"></i>
+				Back
+			</a>
+			<a class="button-labeled accent right" href="#">
+				Next
+				<i class="icon icon-arrow-right-solid"></i>
+			</a>
+		</div>
+	</div>
+
+
+</main>
+	<footer class="main-footer">
+	<div class="container">
+		<div class="inner-wrapper-footer">
+			<ul class="footer-menu-left">
+				<li class="menu-item"><a href="#">Brought <br> to you by</a></li>
+				<li class="divider"></li>
+				<li class="menu-item">
+					<a href="#">
+						<img src="img/logo-footer.png" alt="trivita clinic logo">
+					</a>
+				</li>
+			</ul>
+			<ul class="footer-menu-right">
+				<li><a href="#">Priivacy policy</a></li>
+				<li><a href="#">Terms & conditions</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+	<script src="libs/jquery/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

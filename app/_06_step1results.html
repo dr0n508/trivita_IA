@@ -1,0 +1,136 @@
+<main class="main page-login">
+	<div class="container">
+
+		<div class="steps-wrapper">
+			<a class="button-labeled left md-hide" href="#">
+				<i class="icon icon-arrow-left-solid"></i>
+				Back
+			</a>
+
+			<div class="progress-bar">
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Start</p>
+				</div>
+
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Step 2</p>
+				</div>
+
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Step 3</p>
+				</div>
+
+				<div class="step done">
+					<div class="bullet done">
+						<span></span>
+						<div class="check icon-check-solid done"></div>
+					</div>
+					<p>Finish</p>
+				</div>
+			</div>
+
+			<a class="button-labeled accent right md-hide" href="#">
+				Next
+				<i class="icon icon-arrow-right-solid"></i>
+			</a>
+		</div>
+
+		<div class="row">
+			<section class="video-section col-md-12 col-lg-7 ">
+				<div class="inner-wrapper rounded">
+					<header class="header-content">
+						<h2 class="title-content">Video Title Example</h2>
+					</header>
+
+					<div class="inner-content d-flex flex-md-column flex-column-reverse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra diam vel eros
+							vulputate iaculis. In dictum metuset orci consectetur blandit. Donec vel mi non lorem
+							venenatis tempor. Quisque consequat lorem ac ullamcorper maximus. Donec aliquet arcu felis,
+							sed mollis lorem iaculis id.
+						</p>
+
+						<div class="video-to-modal rounded">
+							<img src="img/video-placeholder2.jpg" alt="video placeholder">
+							<a href="#" class="inner-video-btn modal-trigger" data-modal="modal-video">
+								<span class="icon-play-video"><span class="path1"></span><span class="path2"></span></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="form-block col-md-12 col-lg-5 ">
+				<div class="inner-wrapper rounded">
+					<header class="header-content">
+						<h2 class="title-content">Your Results</h2>
+					</header>
+					<div class="inner-content">
+
+						<div id="score_step1" class="gauge" style="--gauge-value:0; --gauge-display-value:50;">
+
+							<div class="needle">
+								<div class="needle-head"></div>
+							</div>
+							<div class="labels">
+								<div class="value-label">
+									<span>Your score</span>
+								</div>
+							</div>
+						</div>
+
+						<p>
+							<label for="points">Custom value range 50-150</label><br />
+							<input type="range" id="gaugeValue-score_step1" name="gaugeValue" min="50" max="150" value="50"
+								   onInput="updateGauge('score_step1', 50, 150);" onChange="updateGauge('score_step1', 50, 150);"
+							/>
+						</p>
+						<a href="#" class="btn-wide primary">Continue With Section 2</a>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="md-visible">
+			<div class="steps-wrapper steps-block-btn-mobile">
+				<a class="button-labeled disabled left" href="#">
+					<i class="icon icon-arrow-left-solid"></i>
+					Back
+				</a>
+				<a class="button-labeled accent right" href="#">
+					Next
+					<i class="icon icon-arrow-right-solid"></i>
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Modal video -->
+	<div class="modal" id="modal-video">
+		<div class="modal-sandbox"></div>
+		<div class="modal-box">
+			<div class="modal-body modal-video">
+				<div class="col-1-2">
+					<div class="videoWrapper">
+						<iframe src="https://player.vimeo.com/video/402717424?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="close-modal" id="close-btn">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

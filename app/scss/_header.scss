@@ -1,0 +1,98 @@
+.main-header {
+  flex: 0 0 auto;
+  position: fixed;
+  height: 90px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .logo {
+    @media (max-width: 767px) {
+      margin-right: 20px;
+      max-width: 150px;
+    }
+  }
+  .menu_wrap {
+    flex-grow: 1;
+    .menu_content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .login_menu {
+      @media (max-width: 767px) {
+        .btn-login {
+          padding: 10px 30px;
+          font-size: 16px;
+          border-radius: 5px;
+        }
+      }
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      &_item.has_child {
+        display: flex;
+        align-items: center;
+        .icon-chevron-down-solid {
+          margin-left: 6px;
+          font-size: 14px;
+        }
+      }
+      &_item {
+        position: relative;
+        padding: 15px 10px;
+        border-top: 2px solid transparent;
+        cursor: pointer;
+        @media (max-width: 374px) {
+          font-size: 12px;
+        }
+        @extend.animate;
+        &:hover {
+          .sub_menu {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      .sub_menu {
+        position: absolute;
+        overflow: hidden;
+        top: 100%;
+        right: 0;
+        width: max-content;
+        min-width: 170px;
+        opacity: 0;
+        visibility: hidden;
+        background: white;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        @extend.animate;
+        &_item {
+          a {
+            display: block;
+            padding: 15px;
+            transition: none;
+          }
+          @extend.animate;
+          &:hover {
+            background: $accent;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+

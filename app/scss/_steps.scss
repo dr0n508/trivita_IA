@@ -1,0 +1,105 @@
+.steps-wrapper {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .progress-bar {
+    flex-grow: 9;
+  }
+}
+
+.steps-block-btn-mobile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar{
+  display: flex;
+  .step{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $text;
+    }
+    .bullet{
+      display: inline-block;
+      position: relative;
+      height: 28px;
+      width: 28px;
+      margin-bottom: 5px;
+      background-color: #f6f7f9;
+      border: solid 2px #dbdcde;
+      border-radius: 50%;
+      transition: 0.2s;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 25px;
+      z-index: 2;
+    }
+    .bullet.done{
+      border-color: #1f5e9e;
+      background: #1f5e9e;
+      span{
+        display: none;
+      }
+      &:after {
+        background: #1f5e9e;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: animate 0.3s linear forwards;
+      }
+    }
+    .bullet.active {
+      background-color: white;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+      border-color: white;
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #1f5e9e;
+      }
+    }
+    .check{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: 12px;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+    .check.done{
+      display: block;
+      color: #fff;
+      z-index: 999;
+    }
+    &:after, &:before {
+      position: absolute;
+      content: '';
+      top: 14px;
+      left: -50%;
+      height: 2px;
+      width: 100%;
+      background: #dbdcde;
+      z-index: 0;
+    }
+    &:first-child {
+      &:after, &:before {
+        content: none;
+      }
+    }
+  }
+  .step.active, .step.done {
+    &:after, &:before {
+      background-color: #1f5e9e;
+    }
+  }
+}

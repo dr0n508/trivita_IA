@@ -1,0 +1,103 @@
+//results clock
+.gauge {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  width: 260px;
+  height: 260px;
+  background: url("../img/ellipse4.png") 50% 50% no-repeat;
+  background-size: 100%;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    margin-left: -13px;
+    margin-top: -13px;
+    top: 50%;
+    left: 50%;
+    border: solid 2px #dbddea;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+  }
+  .needle {
+    /* Gauge value range 0-100 */
+    transform: rotate(calc(226deg * calc(var(--gauge-value, 0deg) / 100) - 22deg));
+    position: relative;
+    left: 0;
+    top: 49%;
+    width: 100%;
+    height: 3%;
+    margin-bottom: -3%;
+    z-index: 2;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+
+      right: 50%;
+      top: 0;
+
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 95px 4px 0;
+      border-color: transparent #1f5e9e transparent transparent;
+      z-index: 3;
+
+
+    }
+    .needle-head {
+      position: relative;
+      top: 0;
+      left: 50%;
+      margin-left: -4px;
+      width: 8px;
+      height: 8px;
+      background-color: #1f5e9e;
+      border-radius: 50%;
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 4px;
+        height: 4px;
+        background-color: white;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        right: 2px;
+        top: 2px;
+        z-index: 5;
+      }
+
+    }
+  }
+  .labels {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .value-label {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      top: 70%;
+      &:after {
+        counter-reset: gauge-value var(--gauge-display-value);
+        content: counter(gauge-value);
+        font-size: 48px;
+        font-weight: 600;
+      }
+      span {
+        text-transform: uppercase;
+        font-size: 14px;
+        display: block;
+        font-weight: 500;
+      }
+    }
+  }
+}
+

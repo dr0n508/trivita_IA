@@ -1,0 +1,9 @@
+.git
+.idea
+/node-modules/
+/app/css/main.min.css
+/app/css/css/main.min.css.map
+/app/index.html
+/app/products.html
+/app/single-product.html
+package-lock.json
