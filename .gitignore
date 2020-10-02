@@ -1,6 +1,6 @@
 .git
 .idea
-/node-modules/
+/node_modules/
 /app/css/main.min.css
 /app/css/css/main.min.css.map
 /app/index.html
