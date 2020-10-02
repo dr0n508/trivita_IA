@@ -15,7 +15,7 @@
 
 .progress-bar{
   display: flex;
-  .step{
+  .step {
     position: relative;
     width: 100%;
     text-align: center;
@@ -40,34 +40,6 @@
       line-height: 25px;
       z-index: 2;
     }
-    .bullet.done{
-      border-color: #1f5e9e;
-      background: #1f5e9e;
-      span{
-        display: none;
-      }
-      &:after {
-        background: #1f5e9e;
-        transform: scaleX(0);
-        transform-origin: left;
-        animation: animate 0.3s linear forwards;
-      }
-    }
-    .bullet.active {
-      background-color: white;
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
-      border-color: white;
-      span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #1f5e9e;
-      }
-    }
     .check{
       position: absolute;
       left: 50%;
@@ -75,11 +47,6 @@
       font-size: 12px;
       transform: translate(-50%, -50%);
       display: none;
-    }
-    .check.done{
-      display: block;
-      color: #fff;
-      z-index: 999;
     }
     &:after, &:before {
       position: absolute;
@@ -97,7 +64,45 @@
       }
     }
   }
-  .step.active, .step.done {
+  .step.active {
+    .bullet {
+      background-color: white;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+      border-color: white;
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #1f5e9e;
+      }
+    }
+    &:after, &:before {
+      background-color: #1f5e9e;
+    }
+  }
+  .step.done {
+    .bullet{
+      border-color: #1f5e9e;
+      background: #1f5e9e;
+      span{
+        display: none;
+      }
+      &:after {
+        background: #1f5e9e;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: animate 0.3s linear forwards;
+      }
+    }
+    .check{
+      display: block;
+      color: #fff;
+      z-index: 999;
+    }
     &:after, &:before {
       background-color: #1f5e9e;
     }

@@ -1,9 +1,19 @@
     //gauge progress bar
 
-    updateGauge('score_step1', 50, 150);
+    let elements = $('.js-score-bar');
+
+    elements.each(function() {
+
+        var id = this.getAttribute('id');
+        var min = this.getAttribute('min');
+        var max = this.getAttribute('max');
+
+        updateGauge(id, min, max);
+
+    });
 
     function updateGauge(id, min, max) {
-        const newGaugeDisplayValue = document.getElementById("gaugeValue-" + id).value;
+        const newGaugeDisplayValue = document.getElementById(id).getAttribute('value');
         const newGaugeValue = Math.floor(((newGaugeDisplayValue - min) / (max - min)) * 100);
         document.getElementById(id).style.setProperty('--gauge-display-value', newGaugeDisplayValue);
         document.getElementById(id).style.setProperty('--gauge-value', newGaugeValue);
