@@ -115,6 +115,7 @@
         if ($(this).is(':checked')){
             $( this ).closest(".slider-range").find(".input-range").prop('disabled', true);
             $( this ).closest(".slider-range").find(".input-range ~ .current-value").text('N/A');
+            // $('.slider-range').WBslider();
         } else {
             $( this ).closest(".slider-range").find(".input-range").prop('disabled', false);
             $('.slider-range').WBslider();
@@ -163,19 +164,31 @@
 
                 var pos = (val - $_input.attr('min'))/($_input.attr('max') - $_input.attr('min'));
 
-                console.log('pos=' +pos);
-
                 // position the title with the thumb
                 var thumbCorrect = thumbwidth * (pos - 0.5) * -1,
                     titlepos = Math.round( ( pos * $_input.width() ) - thumbwidth/4 + thumbCorrect );
-
-                console.log(titlepos);
 
                 $_current_value.css({'left': titlepos});
 
                 // show "progress" on the track
                 pos = Math.round( pos * 99 ); // to hide stuff behide the thumb
+
+
+
+                // if ($_this.attr('disabled')) {
+                //     console.log('disabled');
+                //     var grad = 'linear-gradient(90deg, #a1a1a1 ' + pos + '%,#dbdcde ' + (pos+1) + '%)';
+                // }
+                //
+                // else  {
+                //     console.log('enabled');
+                //     var grad = 'linear-gradient(90deg, #1f5e9e ' + pos + '%,#dbdcde ' + (pos+1) + '%)';
+                // }
+
                 var grad = 'linear-gradient(90deg, #1f5e9e ' + pos + '%,#dbdcde ' + (pos+1) + '%)';
+
+
+
                 $_input.css({'background': grad});
 
             }).on('focus', function() {
