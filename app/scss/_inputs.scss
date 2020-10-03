@@ -118,48 +118,52 @@
 
 //custom checkbox
 .custom-checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  input+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    position: relative;
+  }
+  input+label::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    margin-right: 10px;
+  }
+  input:checked+label::before {
+    border-color: #005ea2;
+    background-color: #005ea2;
+  }
+  input:checked+label::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+  }
+  input:focus+label::before {
+    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+  }
 }
 
-.custom-checkbox+label {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-  position: relative;
-}
-.custom-checkbox+label::before {
-  content: '';
-  display: block;
-  width: 12px;
-  height: 12px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid #e3e3e3;
-  border-radius: 2px;
-  margin-right: 10px;
-}
 
-.custom-checkbox:checked+label::before {
-  border-color: #005ea2;
-  background-color: #005ea2;
-}
 
-.custom-checkbox:checked+label::after {
-  content: '';
-  position: absolute;
-  left: 3px;
-  display: block;
-  width: 6px;
-  height: 6px;
-  background: white;
-  border-radius: 50%;
-}
 
-.custom-checkbox:focus+label::before {
-  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
-}
+
+
 
 
 //custom radio button
@@ -226,82 +230,115 @@
 }
 
 //custom range slider
+.slider-range {
+  margin-bottom: 20px;
+  input[type=range] {
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    height: 2px;
+    padding: 0;
+    border-radius: 4px;
+    background: #6c6d70;
+    box-sizing: content-box;
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-slider-thumb {
+      cursor: pointer;
+      -webkit-appearance: none;
+      width: 30px;
+      height: 30px;
+      border: 2px solid $accent;
+      border-radius: 25px;
+      background: url("../img/point.png") 50% 50% no-repeat, white;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    }
+    &::-moz-range-thumb {
+      cursor: pointer;
+      -webkit-appearance: none;
+      width: 30px;
+      height: 30px;
+      border: 2px solid $accent;
+      border-radius: 25px;
+      background: url("../img/point.png") 50% 50% no-repeat, white;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+  input[type=range][disabled] {
+    &::-webkit-slider-thumb {
+      cursor: initial;
+      border: 2px solid #a1a1a1;
+      background: url("../img/point-disabled.png") 50% 50% no-repeat, white;
+    }
+    &::-moz-range-thumb {
+      cursor: initial;
+      border: 2px solid #a1a1a1;
+      background: url("../img/point-disabled.png") 50% 50% no-repeat, white;
+    }
+  }
+  input[type=range][disabled] ~ .current-value {
+    background-color: #a1a1a1;
+    &:after {
+      border-color: #a1a1a1 transparent transparent transparent;
+    }
+  }
+  .range {
+    position: relative;
+    width: 100%;
+    padding: 0 1.4rem;
+    margin: 60px 0 20px;
+    .current-value {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      width: 60px;
+      padding: 5px 0;
+      text-align: center;
+      color: white;
+      background-color: $accent;
+      border-radius: 5px;
+      font-size: 16px;
+      white-space: nowrap;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        right: 50%;
+        margin-right: -6.5px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 6.5px 0 6.5px;
+        border-color: $accent transparent transparent transparent;
+      }
+    }
+  }
+  .range-number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.4rem;
+    .min-value,
+    .max-value,
+    .middle-value {
+      position: relative;
+      color: $text;
+      font-size: 16px;
+    }
+  }
+  .custom-checkbox {
+    text-align: right;
+    padding: 0 1.4rem;
+    .label-input {
+      text-transform: initial;
+    }
+  }
+}
 
 
-.slider {
-  display: flex;
-  margin: 100px 0;
-}
-.min-value,
-.max-value {
-  float: left;
-  width: 10%;
-  color: #6c6d70;
-  text-align: right;
-  font-size: 16px;
-}
-.max-value {
-  text-align: left;
-}
-.current-value {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  width: 60px;
-  padding: 5px 0;
-  text-align: center;
-  color: white;
-  background-color: $accent;
-  border-radius: 5px;
-  font-size: 16px;
-  white-space: nowrap;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    right: 50%;
-    margin-right: -6.5px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 5px 6.5px 0 6.5px;
-    border-color: $accent transparent transparent transparent;
-  }
-}
-.range {
-  position: relative;
-  width: 80%;
-  padding: 0 1.4rem;
-}
-input[type=range] {
-  -webkit-appearance: none;
-  display: block;
-  width: 100%;
-  height: 2px;
-  padding: 0;
-  border-radius: 4px;
-  background: #6c6d70;
-  box-sizing: content-box;
-  &:focus {
-    outline: none;
-  }
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 30px;
-    height: 30px;
-    border: 2px solid $accent;
-    border-radius: 25px;
-    background: url("../img/point.png") 50% 50% no-repeat, white;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
-  }
-  &::-moz-range-thumb {
-    -webkit-appearance: none;
-    width: 30px;
-    height: 30px;
-    border: 2px solid $accent;
-    border-radius: 25px;
-    background: url("../img/point.png") 50% 50% no-repeat, white;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
-  }
-}
+
+
+
+

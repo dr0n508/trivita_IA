@@ -104,19 +104,49 @@
 
     //custom range slider
 
+
+    //checkbox
+
+    $('.slider-range input[type="checkbox"]').click(function(e) {
+
+
+
+
+        if ($(this).is(':checked')){
+            $( this ).closest(".slider-range").find(".input-range").prop('disabled', true);
+            $( this ).closest(".slider-range").find(".input-range ~ .current-value").text('N/A');
+        } else {
+            $( this ).closest(".slider-range").find(".input-range").prop('disabled', false);
+            $('.slider-range').WBslider();
+        }
+
+
+
+
+
+
+
+
+    });
+
     $.fn.WBslider = function() {
         return this.each(function() {
             var $_this = $(this),
-                $_input = $('input', $_this),
+                $_input = $('.input-range', $_this),
                 $_current_value = $('.current-value', $_this),
                 $_min_value = $_input.attr('min'),
                 $_max_value = $_input.attr('max'),
                 thumbwidth = 30; // set this to the pixel width of the thumb
 
+
+
+
             // set range max to current year
             $_input.attr('max', $_max_value);
             $('.max-value span', $_this).text($_max_value);
-            //$_input.val($_max_value - 10);
+
+
+
 
             $_input.on('input change keyup', function() {
                 var $_this = $(this),
@@ -162,6 +192,6 @@
 
     $(function() {
 
-        $('.slider').WBslider();
+        $('.slider-range').WBslider();
 
     });
