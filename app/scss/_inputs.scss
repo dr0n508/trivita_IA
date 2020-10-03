@@ -225,5 +225,83 @@
   }
 }
 
+//custom range slider
 
 
+.slider {
+  display: flex;
+  margin: 100px 0;
+}
+.min-value,
+.max-value {
+  float: left;
+  width: 10%;
+  color: #6c6d70;
+  text-align: right;
+  font-size: 16px;
+}
+.max-value {
+  text-align: left;
+}
+.current-value {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 60px;
+  padding: 5px 0;
+  text-align: center;
+  color: white;
+  background-color: $accent;
+  border-radius: 5px;
+  font-size: 16px;
+  white-space: nowrap;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    margin-right: -6.5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 6.5px 0 6.5px;
+    border-color: $accent transparent transparent transparent;
+  }
+}
+.range {
+  position: relative;
+  width: 80%;
+  padding: 0 1.4rem;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  height: 2px;
+  padding: 0;
+  border-radius: 4px;
+  background: #6c6d70;
+  box-sizing: content-box;
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $accent;
+    border-radius: 25px;
+    background: url("../img/point.png") 50% 50% no-repeat, white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  }
+  &::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $accent;
+    border-radius: 25px;
+    background: url("../img/point.png") 50% 50% no-repeat, white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  }
+}
