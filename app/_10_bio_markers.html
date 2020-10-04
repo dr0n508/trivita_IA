@@ -93,38 +93,47 @@
 							</div>
 
 							<div class="form-row border slim">
-								<p>
-									<span class="bold">2. Blood Sugar
-										<span class="tooltip-q icon-question-circle-solid" title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!"></span>
-									</span>
-								</p>
 
 								<div class="slider-range">
 
-									<div class="custom-checkbox">
-										<input type="checkbox" class="" id="unknown_sugar" name="unknown_sugar" value="yes">
-										<label class="label-input" for="unknown_sugar">Unknown</label>
+									<div class="header-slider-range">
+										<p class="title-slider-range">
+											<span class="bold">2. Blood Sugar
+												<span class="tooltip-q icon-question-circle-solid" title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!"></span>
+											</span>
+										</p>
+
+										<div class="custom-checkbox">
+											<input type="checkbox" class="js-unk-checkbox" id="unknown_sugar" name="unknown_sugar" value="yes">
+											<label class="label-input" for="unknown_sugar">Unknown</label>
+										</div>
 									</div>
 
-									<div class="range">
-										<input class="input-range" type="range" name="date" id="dae1" min="100" max="126" step="1" value="103" required>
-										<span class="current-value"></span>
-									</div>
+									<div class="content-slider-range">
+										<div class="range">
+											<input class="input-range" type="range" name="date" id="dae1" min="100" max="126" step="1" value="103" required>
+											<span class="current-value"></span>
+										</div>
 
-									<div class="value-range">
-										<span class="value-min">
-											<span><</span>100
-											<span class="value-label">Diastolic</span>
-										</span>
-										<span class="value-middle">113</span>
-										<span class="value-max"><span></span>+</span>
+										<div class="value-range">
+											<span class="value-min">
+												<span><</span>100
+												<span class="value-label"></span>
+											</span>
+											<span class="point-range"></span>
+											<span class="point-range"></span>
+											<span class="value-middle">113</span>
+											<span class="point-range"></span>
+											<span class="point-range"></span>
+											<span class="value-max"><span></span>+
+											</span>
+										</div>
 									</div>
 
 								</div>
 							</div>
 
 							<div class="form-row border slim">
-
 
 								<div class="slider-range">
 
@@ -136,27 +145,30 @@
 										</p>
 
 										<div class="custom-checkbox">
-											<input type="checkbox" class="" id="unknown_homocysteine" name="unknown_homocysteine" value="yes">
+											<input type="checkbox" class="js-unk-checkbox" id="unknown_homocysteine" name="unknown_homocysteine" value="yes">
 											<label class="label-input" for="unknown_homocysteine">Unknown</label>
 										</div>
 									</div>
 
-									<div class="range">
-										<input class="input-range" type="range" name="date" id="dae1" min="100" max="126" step="1" value="121" required>
-										<span class="current-value"></span>
-									</div>
+									<div class="content-slider-range">
+										<div class="range">
+											<input class="input-range" type="range" name="date" id="dae1" min="100" max="126" step="1" value="121" required>
+											<span class="current-value"></span>
+										</div>
 
-									<div class="value-range">
-										<span class="value-min">
-											<span><</span>100
-											<span class="value-label">Diastolic</span>
-										</span>
-										<span class="point-range"></span>
-										<span class="point-range"></span>
-										<span class="value-middle">113</span>
-										<span class="point-range"></span>
-										<span class="point-range"></span>
-										<span class="value-max"><span></span>+</span>
+										<div class="value-range">
+											<span class="value-min">
+												<span><</span>100
+												<span class="value-label"></span>
+											</span>
+												<span class="point-range"></span>
+												<span class="point-range"></span>
+												<span class="value-middle">113</span>
+												<span class="point-range"></span>
+												<span class="point-range"></span>
+												<span class="value-max"><span></span>+
+											</span>
+										</div>
 									</div>
 
 								</div>
@@ -164,38 +176,102 @@
 
 							<div class="form-row border slim">
 
+								<div class="slider-range">
+
+									<div class="header-slider-range">
+										<p class="title-slider-range">
+											<span class="bold">4. Blood Pressure
+												<span class="tooltip-q icon-question-circle-solid"
+													  title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!">
+												</span>
+											</span>
+										</p>
+
+										<div class="custom-checkbox">
+											<input type="checkbox" class="js-unk-checkbox" id="blood_pressure" name="blood_pressure" value="yes">
+											<label class="label-input" for="blood_pressure">Unknown</label>
+										</div>
+									</div>
+
+									<div class="content-slider-range">
+										<div class="range">
+											<input class="input-range" type="range" name="systolic" id="systolic" min="120" max="140" step="1" value="127" required>
+											<span class="current-value"></span>
+										</div>
+
+										<div class="value-range">
+										<span class="value-min">
+											<span><</span>120
+											<span class="value-label">Diastolic</span>
+										</span>
+											<span class="point-range"></span>
+											<span class="point-range"></span>
+											<span class="value-middle">130</span>
+											<span class="point-range"></span>
+											<span class="point-range"></span>
+											<span class="value-max"><span></span>+</span>
+										</div>
+									</div>
+
+									<div class="content-slider-range">
+										<div class="range">
+											<input class="input-range" type="range" name="diastolic" id="diastolic" min="70" max="90" step="1" value="87" required>
+											<span class="current-value"></span>
+										</div>
+
+										<div class="value-range">
+										<span class="value-min">
+											<span><</span>70
+											<span class="value-label">Diastolic</span>
+										</span>
+											<span class="point-range"></span>
+											<span class="point-range"></span>
+											<span class="value-middle">85</span>
+											<span class="point-range"></span>
+											<span class="point-range"></span>
+											<span class="value-max"><span></span>+</span>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="form-row border slim">
 
 								<div class="slider-range">
 
 									<div class="header-slider-range">
 										<p class="title-slider-range">
-											<span class="bold">3. Homocysteine
+											<span class="bold">5. What is your resting pulse rate?
 												<span class="tooltip-q icon-question-circle-solid" title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!"></span>
 											</span>
 										</p>
 
 										<div class="custom-checkbox">
-											<input type="checkbox" class="" id="unknown_homocysteine" name="unknown_homocysteine" value="yes">
-											<label class="label-input" for="unknown_homocysteine">Unknown</label>
+											<input type="checkbox" class="js-unk-checkbox" id="unknown_pulse" name="unknown_pulse" value="yes">
+											<label class="label-input" for="unknown_pulse">Unknown</label>
 										</div>
 									</div>
 
-									<div class="range">
-										<input class="input-range" type="range" name="date" id="dae1" min="100" max="126" step="1" value="121" required>
-										<span class="current-value"></span>
-									</div>
+									<div class="content-slider-range">
+										<div class="range">
+											<input class="input-range" type="range" name="date" id="dae1" min="70" max="90" step="1" value="78" required>
+											<span class="current-value"></span>
+										</div>
 
-									<div class="value-range">
-										<span class="value-min">
-											<span><</span>100
-											<span class="value-label">Diastolic</span>
-										</span>
-										<span class="point-range"></span>
-										<span class="point-range"></span>
-										<span class="value-middle">11333</span>
-										<span class="point-range"></span>
-										<span class="point-range"></span>
-										<span class="value-max"><span></span>+</span>
+										<div class="value-range">
+											<span class="value-min">
+												<span><</span>70
+												<span class="value-label"></span>
+											</span>
+											<span class="point-range"></span>
+											<span class="point-range"></span>
+											<span class="value-middle">80</span>
+											<span class="point-range"></span>
+											<span class="point-range"></span>
+											<span class="value-max"><span></span>+
+											</span>
+										</div>
 									</div>
 
 								</div>

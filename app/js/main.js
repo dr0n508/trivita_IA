@@ -105,15 +105,15 @@
     //custom range slider
 
 
-    //checkbox for unknown value of input
-    $('.slider-range input[type="checkbox"]').click(function(e) {
+    //checkbox to unknown value of input
+    $('.slider-range .js-unk-checkbox').click(function(e) {
 
         if ($(this).is(':checked')){
-            $( this ).closest(".slider-range").find(".input-range").prop('disabled', true);
-            $( this ).closest(".slider-range").CustomRangeSlider('checked');
+            $( this ).closest(".slider-range").find(".content-slider-range .input-range").prop('disabled', true);
+            $( this ).closest(".slider-range").find(".content-slider-range").CustomRangeSlider('checked');
         } else {
-                $( this ).closest(".slider-range").find(".input-range").prop('disabled', false);
-            $( this ).closest(".slider-range").CustomRangeSlider('unchecked');
+            $( this ).closest(".slider-range").find(".content-slider-range .input-range").prop('disabled', false);
+            $( this ).closest(".slider-range").find(".content-slider-range").CustomRangeSlider('unchecked');
         }
 
     });
@@ -187,6 +187,6 @@
 
     $(function() {
 
-        $('.slider-range').CustomRangeSlider('unchecked');
+        $('.content-slider-range').CustomRangeSlider('unchecked');
 
     });
