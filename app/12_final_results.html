@@ -48,10 +48,11 @@
 		</div>
 	</div>
 </header>
-	<main class="main page-measurements">
+	<main class="main step-2-results">
 	<div class="container">
+
 		<div class="steps-wrapper">
-			<a class="button-labeled disabled left md-hide" href="#">
+			<a class="button-labeled left md-hide" href="#">
 				<i class="icon icon-arrow-left-solid"></i>
 				Back
 			</a>
@@ -70,28 +71,12 @@
 						<span></span>
 						<div class="check icon-check-solid"></div>
 					</div>
-					<p>Step 2</p>
-				</div>
-
-				<div class="step active">
-					<div class="bullet">
-						<span></span>
-						<div class="check icon-check-solid"></div>
-					</div>
-					<p>Step 3</p>
-				</div>
-
-				<div class="step">
-					<div class="bullet">
-						<span></span>
-						<div class="check icon-check-solid"></div>
-					</div>
 					<p>Finish</p>
 				</div>
 			</div>
 
 			<a class="button-labeled accent right md-hide" href="#">
-				Next
+				Results
 				<i class="icon icon-arrow-right-solid"></i>
 			</a>
 		</div>
@@ -99,11 +84,21 @@
 		<div class="row">
 			<section class="video-section col-md-12 col-lg-7 ">
 				<div class="inner-wrapper rounded">
-					<header class="header-content">
+					<header class="header-content header-download">
 						<h2 class="title-content">Video Title Example</h2>
+
+						<a href="img/logo-footer.png" class="download-btn mobile-hide" download>
+							<span class="name-file">FREE Inflammation Health Awareness Guide</span>
+							<span class="size-file">4.2 MB .pdf</span>
+						</a>
 					</header>
 
 					<div class="inner-content d-flex flex-md-column flex-column-reverse">
+						<a href="img/logo-footer.png" class="download-btn mobile-visible" download>
+							<span class="name-file">FREE Inflammation Health Awareness Guide</span>
+							<span class="size-file">4.2 MB .pdf</span>
+						</a>
+
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra diam vel eros
 							vulputate iaculis. In dictum metuset orci consectetur blandit. Donec vel mi non lorem
 							venenatis tempor. Quisque consequat lorem ac ullamcorper maximus. Donec aliquet arcu felis,
@@ -111,7 +106,7 @@
 						</p>
 
 						<div class="video-to-modal rounded">
-							<img src="img/video-placeholder.jpg" alt="video placeholder">
+							<img src="img/video-placeholder5.jpg" alt="video placeholder">
 							<a href="#" class="inner-video-btn modal-trigger" data-modal="modal-video">
 								<span class="icon-play-video"><span class="path1"></span><span class="path2"></span></span>
 							</a>
@@ -119,60 +114,29 @@
 					</div>
 				</div>
 			</section>
-
 			<section class="form-block col-md-12 col-lg-5 ">
 				<div class="inner-wrapper rounded">
 					<header class="header-content">
-						<h2 class="title-content">Your Stats</h2>
+						<h2 class="title-content">Your Results</h2>
 					</header>
 					<div class="inner-content">
-						<form action="">
-							<label class="label-input">Gender:</label>
-							<div class="radio-toolbar double-input">
-								<div class="column50">
-									<input type="radio" id="gender_male" name="gender" value="male">
-									<label for="gender_male">Male</label>
-								</div>
 
-								<div class="column50">
-									<input type="radio" id="gender_female" name="gender" value="female" checked>
-									<label for="gender_female">Female</label>
+						<div id="score_step2" class="gauge js-score-bar"
+							 min="0" max="170" value="110"
+							 style="--gauge-value:0; --gauge-display-value:0;"
+						>
+
+							<div class="needle">
+								<div class="needle-head"></div>
+							</div>
+							<div class="labels">
+								<div class="value-label">
+									<span>Your score</span>
 								</div>
 							</div>
+						</div>
 
-							<label class="label-input">Height:</label>
-							<span class="tooltip-q icon-question-circle-solid" title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!"></span>
-							<div class="double-input">
-								<div class="column50">
-									<div class="custom-input">
-										<input type="number" name="height_ft" id="height_ft" placeholder="Ft.">
-									</div>
-								</div>
-								<div class="column50">
-									<div class="custom-input">
-										<input type="number" name="height_in" id="height_in" placeholder="In.">
-									</div>
-								</div>
-							</div>
-
-							<div class="double-input">
-								<div class="column50">
-									<label class="label-input">Waist:</label>
-									<span class="tooltip-q icon-question-circle-solid" title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!"></span>
-									<div class="custom-input">
-										<input type="number" name="waist_in" id="waist_in" placeholder="In.">
-									</div>
-								</div>
-								<div class="column50">
-									<label class="label-input">Weight:</label>
-									<span class="tooltip-q icon-question-circle-solid" title="This text will show up in your tooltip! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, provident!"></span>
-									<div class="custom-input">
-										<input type="number" name="weight_lbs" id="weight_lbs" placeholder="Lbs.">
-									</div>
-								</div>
-							</div>
-							<button type="submit" class="btn-wide primary">Next</button>
-						</form>
+						<a href="#" class="btn-wide primary">View Results Summary</a>
 					</div>
 				</div>
 			</section>
@@ -180,12 +144,12 @@
 
 		<div class="md-visible">
 			<div class="steps-wrapper steps-block-btn-mobile">
-				<a class="button-labeled disabled left" href="#">
+				<a class="button-labeled left" href="#">
 					<i class="icon icon-arrow-left-solid"></i>
 					Back
 				</a>
 				<a class="button-labeled accent right" href="#">
-					Next
+					Results
 					<i class="icon icon-arrow-right-solid"></i>
 				</a>
 			</div>
@@ -210,7 +174,6 @@
 			</div>
 		</div>
 	</div>
-
 </main>
 	<footer class="main-footer">
 	<div class="container">
