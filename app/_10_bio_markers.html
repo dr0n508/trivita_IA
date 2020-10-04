@@ -75,20 +75,19 @@
 
 								<div class="radio-toolbar double-input">
 									<div class="column50">
-										<input type="radio" id="bloodwork_q1_prediabetic" name="bloodwork_q1" value="prediabetic">
-										<label for="bloodwork_q1_prediabetic">Prediabetic</label>
+										<input type="radio" id="blood_work_q1_prediabetic" name="blood_work_q1" value="prediabetic">
+										<label for="blood_work_q1_prediabetic">Prediabetic</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q1_diabetic" name="bloodwork_q1" value="diabetic" checked>
-										<label for="bloodwork_q1_diabetic">Diabetic</label>
+										<input type="radio" id="blood_work_q1_diabetic" name="blood_work_q1" value="diabetic" checked>
+										<label for="blood_work_q1_diabetic">Diabetic</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q1_n_a" name="bloodwork_q1" value="n_a">
-										<label for="bloodwork_q1_n_a">N/A</label>
+										<input type="radio" id="blood_work_q1_n_a" name="blood_work_q1" value="n_a">
+										<label for="blood_work_q1_n_a">N/A</label>
 									</div>
-
 								</div>
 							</div>
 
@@ -111,11 +110,11 @@
 
 									<div class="content-slider-range">
 										<div class="range">
-											<input class="input-range" type="range" name="date" id="dae1" min="100" max="126" step="1" value="103" required>
+											<input class="input-range" type="range" name="blood_work_q2" id="blood_work_q2" min="100" max="126" step="1" value="103" required>
 											<span class="current-value"></span>
 										</div>
 
-										<div class="value-range">
+										<div class="value-line">
 											<span class="value-min">
 												<span><</span>100
 												<span class="value-label"></span>
@@ -148,11 +147,11 @@
 
 									<div class="content-slider-range">
 										<div class="range">
-											<input class="input-range" type="range" name="date" id="dae1" min="100" max="126" step="1" value="121" required>
+											<input class="input-range" type="range" name="blood_work_q3" id="blood_work_q3" min="100" max="126" step="1" value="121" required>
 											<span class="current-value"></span>
 										</div>
 
-										<div class="value-range">
+										<div class="value-line">
 											<span class="value-min">
 												<span><</span>100
 												<span class="value-label"></span>
@@ -162,7 +161,6 @@
 											</span>
 										</div>
 									</div>
-
 								</div>
 							</div>
 
@@ -180,18 +178,18 @@
 										</p>
 
 										<div class="custom-checkbox">
-											<input type="checkbox" class="js-unk-checkbox" id="blood_pressure" name="blood_pressure" value="yes">
-											<label class="label-input" for="blood_pressure">Unknown</label>
+											<input type="checkbox" class="js-unk-checkbox" id="blood_pressure_unk" name="blood_pressure_unk" value="yes">
+											<label class="label-input" for="blood_pressure_unk">Unknown</label>
 										</div>
 									</div>
 
 									<div class="content-slider-range">
 										<div class="range">
-											<input class="input-range" type="range" name="systolic" id="systolic" min="120" max="140" step="1" value="127" required>
+											<input class="input-range" type="range" name="blood_work_q4_systolic" id="blood_work_q4_systolic" min="120" max="140" step="1" value="127" required>
 											<span class="current-value"></span>
 										</div>
 
-										<div class="value-range">
+										<div class="value-line">
 										<span class="value-min">
 											<span><</span>120
 											<span class="value-label">Systolic</span>
@@ -203,11 +201,11 @@
 
 									<div class="content-slider-range">
 										<div class="range">
-											<input class="input-range" type="range" name="diastolic" id="diastolic" min="70" max="90" step="1" value="87" required>
+											<input class="input-range" type="range" name="blood_work_q4_diastolic" id="blood_work_q4_diastolic" min="70" max="90" step="1" value="87" required>
 											<span class="current-value"></span>
 										</div>
 
-										<div class="value-range">
+										<div class="value-line">
 											<span class="value-min">
 												<span><</span>70
 												<span class="value-label">Diastolic</span>
@@ -218,7 +216,6 @@
 											</span>
 										</div>
 									</div>
-
 								</div>
 							</div>
 
@@ -241,11 +238,11 @@
 
 									<div class="content-slider-range">
 										<div class="range">
-											<input class="input-range" type="range" name="date" id="dae1" min="70" max="90" step="1" value="78" required>
+											<input class="input-range" type="range" name="blood_work_q5" id="blood_work_q5" min="70" max="90" step="1" value="78" required>
 											<span class="current-value"></span>
 										</div>
 
-										<div class="value-range">
+										<div class="value-line">
 											<span class="value-min">
 												<span><</span>70
 												<span class="value-label"></span>
@@ -255,7 +252,6 @@
 											</span>
 										</div>
 									</div>
-
 								</div>
 							</div>
 
@@ -270,18 +266,18 @@
 
 								<div class="radio-toolbar double-input">
 									<div class="column50">
-										<input type="radio" id="bloodwork_q6_yes" name="bloodwork_q6" value="yes">
-										<label for="bloodwork_q6_yes">Yes</label>
+										<input type="radio" id="blood_work_q6_yes" name="blood_work_q6" value="yes">
+										<label for="blood_work_q6_yes">Yes</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q6_no" name="bloodwork_q6" value="no" checked>
-										<label for="bloodwork_q6_no">No</label>
+										<input type="radio" id="blood_work_q6_no" name="blood_work_q6" value="no" checked>
+										<label for="blood_work_q6_no">No</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q6_unknown" name="bloodwork_q6" value="unknown">
-										<label for="bloodwork_q6_unknown">Unknown</label>
+										<input type="radio" id="blood_work_q6_unknown" name="blood_work_q6" value="unknown">
+										<label for="blood_work_q6_unknown">Unknown</label>
 									</div>
 
 								</div>
@@ -297,18 +293,18 @@
 
 								<div class="radio-toolbar double-input">
 									<div class="column50">
-										<input type="radio" id="bloodwork_q7_yes" name="bloodwork_q7" value="yes">
-										<label for="bloodwork_q7_yes">Yes</label>
+										<input type="radio" id="blood_work_q7_yes" name="blood_work_q7" value="yes">
+										<label for="blood_work_q7_yes">Yes</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q7_no" name="bloodwork_q7" value="no" checked>
-										<label for="bloodwork_q7_no">No</label>
+										<input type="radio" id="blood_work_q7_no" name="blood_work_q7" value="no" checked>
+										<label for="blood_work_q7_no">No</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q7_unknown" name="bloodwork_q7" value="unknown">
-										<label for="bloodwork_q7_unknown">Unknown</label>
+										<input type="radio" id="blood_work_q7_unknown" name="blood_work_q7" value="unknown">
+										<label for="blood_work_q7_unknown">Unknown</label>
 									</div>
 
 								</div>
@@ -324,18 +320,18 @@
 
 								<div class="radio-toolbar double-input">
 									<div class="column50">
-										<input type="radio" id="bloodwork_q8_yes" name="bloodwork_q8" value="yes">
-										<label for="bloodwork_q8_yes">Yes</label>
+										<input type="radio" id="blood_work_q8_yes" name="blood_work_q8" value="yes">
+										<label for="blood_work_q8_yes">Yes</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q8_no" name="bloodwork_q8" value="no" checked>
-										<label for="bloodwork_q8_no">No</label>
+										<input type="radio" id="blood_work_q8_no" name="blood_work_q8" value="no" checked>
+										<label for="blood_work_q8_no">No</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q8_unknown" name="bloodwork_q8" value="unknown">
-										<label for="bloodwork_q8_unknown">Unknown</label>
+										<input type="radio" id="blood_work_q8_unknown" name="blood_work_q8" value="unknown">
+										<label for="blood_work_q8_unknown">Unknown</label>
 									</div>
 
 								</div>
@@ -351,18 +347,18 @@
 
 								<div class="radio-toolbar double-input">
 									<div class="column50">
-										<input type="radio" id="bloodwork_q9_yes" name="bloodwork_q9" value="yes">
-										<label for="bloodwork_q9_yes">Yes</label>
+										<input type="radio" id="blood_work_q9_yes" name="blood_work_q9" value="yes">
+										<label for="blood_work_q9_yes">Yes</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q9_no" name="bloodwork_q9" value="no" checked>
-										<label for="bloodwork_q9_no">No</label>
+										<input type="radio" id="blood_work_q9_no" name="blood_work_q9" value="no" checked>
+										<label for="blood_work_q9_no">No</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q9_unknown" name="bloodwork_q9" value="unknown">
-										<label for="bloodwork_q9_unknown">Unknown</label>
+										<input type="radio" id="blood_work_q9_unknown" name="blood_work_q9" value="unknown">
+										<label for="blood_work_q9_unknown">Unknown</label>
 									</div>
 
 								</div>
@@ -378,18 +374,18 @@
 
 								<div class="radio-toolbar double-input">
 									<div class="column50">
-										<input type="radio" id="bloodwork_q10_yes" name="bloodwork_q10" value="yes">
-										<label for="bloodwork_q10_yes">Yes</label>
+										<input type="radio" id="blood_work_q10_yes" name="blood_work_q10" value="yes">
+										<label for="blood_work_q10_yes">Yes</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q10_no" name="bloodwork_q10" value="no" checked>
-										<label for="bloodwork_q10_no">No</label>
+										<input type="radio" id="blood_work_q10_no" name="blood_work_q10" value="no" checked>
+										<label for="blood_work_q10_no">No</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q10_unknown" name="bloodwork_q10" value="unknown">
-										<label for="bloodwork_q10_unknown">Unknown</label>
+										<input type="radio" id="blood_work_q10_unknown" name="blood_work_q10" value="unknown">
+										<label for="blood_work_q10_unknown">Unknown</label>
 									</div>
 
 								</div>
@@ -405,18 +401,18 @@
 
 								<div class="radio-toolbar double-input">
 									<div class="column50">
-										<input type="radio" id="bloodwork_q11_yes" name="bloodwork_q11" value="yes">
-										<label for="bloodwork_q11_yes">Yes</label>
+										<input type="radio" id="blood_work_q11_yes" name="blood_work_q11" value="yes">
+										<label for="blood_work_q11_yes">Yes</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q11_no" name="bloodwork_q11" value="no" checked>
-										<label for="bloodwork_q11_no">No</label>
+										<input type="radio" id="blood_work_q11_no" name="blood_work_q11" value="no" checked>
+										<label for="blood_work_q11_no">No</label>
 									</div>
 
 									<div class="column50">
-										<input type="radio" id="bloodwork_q11_unknown" name="bloodwork_q11" value="unknown">
-										<label for="bloodwork_q11_unknown">Unknown</label>
+										<input type="radio" id="blood_work_q11_unknown" name="blood_work_q11" value="unknown">
+										<label for="blood_work_q11_unknown">Unknown</label>
 									</div>
 
 								</div>
