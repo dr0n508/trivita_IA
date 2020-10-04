@@ -123,14 +123,17 @@
                 $_current_value = $('.current-value', $_this),
                 $_min_value = $_input.attr('min'),
                 $_max_value = $_input.attr('max'),
+                $_middle_value = $_input.attr('middle'),
                 thumbwidth = 30; // set this to the pixel width of the thumb
 
 
             // set range max and min
             $_input.attr('max', $_max_value);
             $_input.attr('min', $_min_value);
+            $_input.attr('middle', $_middle_value);
             $('.value-max', $_this).text($_max_value);
             $('.value-min .value-min-text', $_this).text($_min_value);
+            $('.value-middle', $_this).text($_middle_value);
 
             $_input.on('input change keyup', function() {
                 var $_this = $(this),
