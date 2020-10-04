@@ -232,7 +232,6 @@
 //custom range slider
 .slider-range {
   margin-bottom: 20px;
-
   .header-slider-range {
     display: flex;
     justify-content: space-between;
@@ -240,8 +239,6 @@
       margin-bottom: 0;
     }
   }
-
-
   input[type=range] {
     -webkit-appearance: none;
     display: block;
@@ -333,38 +330,50 @@
     .value-min,
     .value-max,
     .value-middle {
+      width: 33.33%;
       position: relative;
-      text-align: center;
       color: $text;
       font-size: 16px;
+      &:after, &:before {
+        position: absolute;
+        display: block;
+        width: 4px;
+        height: 4px;
+        background-color: #dbdcde;
+        border-radius: 50%;
+        top: 50%;
+        margin-top: -2px;
+      }
       .value-label {
         font-size: 14px;
         display: block;
       }
     }
-    .point-range {
-      position: relative;
+    .value-middle {
+      text-align: center;
       &:after {
         content: "";
-        display: block;
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        background-color: #a1a1a1;
-        border-radius: 50%;
-        right: 50%;
+        right: 0;
         margin-right: -2px;
-        top: 50%;
-        margin-top: -2px;
+      }
+      &:before {
+        content: "";
+        left: 0;
+        margin-left: -2px;
       }
     }
-    > span {
-      width: 14.285714285714286%;
-      &:first-child {
-        text-align: left;
-      }
-      &:last-child {
-        text-align: right;
+    .value-min:after {
+      content: "";
+      right: 50%;
+      margin-right: -2px;
+
+    }
+    .value-max {
+      text-align: right;
+      &:before {
+        content: "";
+        left: 50%;
+        margin-left: -2px;
       }
     }
   }
