@@ -1,5 +1,4 @@
-    //gauge progress bar
-
+    //////////////gauge progress bar (circle results)
     let elements = $('.js-score-bar');
 
     elements.each(function() {
@@ -19,7 +18,7 @@
         document.getElementById(id).style.setProperty('--gauge-value', newGaugeValue);
     }
 
-	// Modal box
+    ////////////// Modal box
 	$(".modal-trigger").click(function(e){
 		e.preventDefault();
 		$(".modal").css({"display":"none"}); //close modal before open another one
@@ -40,7 +39,7 @@
 
 	});
 
-	// Show/hide password
+    ////////////// Show/hide password
 	$(".icon-visible").on('click', function() {
 
 		const password = $(this).siblings("input");
@@ -50,7 +49,7 @@
 
 	});
 
-	// Tooltip
+    ////////////// Tooltip
     $('.tooltip-q').each(function(){
 
         $(this).data('title',$(this).attr('title'));
@@ -102,21 +101,20 @@
     });
 
 
-    //custom range slider
+    //////////////custom range slider
 
+        //checkbox to unknown value of input
+        $('.slider-range .js-unk-checkbox').click(function(e) {
 
-    //checkbox to unknown value of input
-    $('.slider-range .js-unk-checkbox').click(function(e) {
+            if ($(this).is(':checked')){
+                $( this ).closest(".slider-range").find(".content-slider-range .input-range").prop('disabled', true);
+                $( this ).closest(".slider-range").find(".content-slider-range").CustomRangeSlider('checked');
+            } else {
+                $( this ).closest(".slider-range").find(".content-slider-range .input-range").prop('disabled', false);
+                $( this ).closest(".slider-range").find(".content-slider-range").CustomRangeSlider('unchecked');
+            }
 
-        if ($(this).is(':checked')){
-            $( this ).closest(".slider-range").find(".content-slider-range .input-range").prop('disabled', true);
-            $( this ).closest(".slider-range").find(".content-slider-range").CustomRangeSlider('checked');
-        } else {
-            $( this ).closest(".slider-range").find(".content-slider-range .input-range").prop('disabled', false);
-            $( this ).closest(".slider-range").find(".content-slider-range").CustomRangeSlider('unchecked');
-        }
-
-    });
+        });
 
     $.fn.CustomRangeSlider = function(stateCheckbox) {
         return this.each(function() {
@@ -126,7 +124,6 @@
                 $_min_value = $_input.attr('min'),
                 $_max_value = $_input.attr('max'),
                 thumbwidth = 30; // set this to the pixel width of the thumb
-
 
 
             // set range max to current year
