@@ -105,32 +105,20 @@
     //custom range slider
 
 
-    //checkbox
-
+    //checkbox for unknown value of input
     $('.slider-range input[type="checkbox"]').click(function(e) {
-
-
-
 
         if ($(this).is(':checked')){
             $( this ).closest(".slider-range").find(".input-range").prop('disabled', true);
-            $( this ).closest(".slider-range").find(".input-range ~ .current-value").text('N/A');
-            // $('.slider-range').WBslider();
+            $( this ).closest(".slider-range").CustomRangeSlider('checked');
         } else {
-            $( this ).closest(".slider-range").find(".input-range").prop('disabled', false);
-            $('.slider-range').WBslider();
+                $( this ).closest(".slider-range").find(".input-range").prop('disabled', false);
+            $( this ).closest(".slider-range").CustomRangeSlider('unchecked');
         }
-
-
-
-
-
-
-
 
     });
 
-    $.fn.WBslider = function() {
+    $.fn.CustomRangeSlider = function(stateCheckbox) {
         return this.each(function() {
             var $_this = $(this),
                 $_input = $('.input-range', $_this),
@@ -141,13 +129,9 @@
 
 
 
-
             // set range max to current year
             $_input.attr('max', $_max_value);
-            $('.max-value span', $_this).text($_max_value);
-
-
-
+            $('.value-max span', $_this).text($_max_value);
 
             $_input.on('input change keyup', function() {
                 var $_this = $(this),
@@ -160,7 +144,13 @@
                     val = 0;
                 }
 
-                $_current_value.text( val );
+                if ( stateCheckbox === 'unchecked') {
+                    $_current_value.text( val );
+                }
+
+                else {
+                    $_current_value.text( 'UNK' );
+                }
 
                 var pos = (val - $_input.attr('min'))/($_input.attr('max') - $_input.attr('min'));
 
@@ -173,21 +163,13 @@
                 // show "progress" on the track
                 pos = Math.round( pos * 99 ); // to hide stuff behide the thumb
 
+                if ( stateCheckbox === 'unchecked') {
+                    var grad = 'linear-gradient(90deg, #1f5e9e ' + pos + '%,#dbdcde ' + (pos+1) + '%)';
+                }
 
-
-                // if ($_this.attr('disabled')) {
-                //     console.log('disabled');
-                //     var grad = 'linear-gradient(90deg, #a1a1a1 ' + pos + '%,#dbdcde ' + (pos+1) + '%)';
-                // }
-                //
-                // else  {
-                //     console.log('enabled');
-                //     var grad = 'linear-gradient(90deg, #1f5e9e ' + pos + '%,#dbdcde ' + (pos+1) + '%)';
-                // }
-
-                var grad = 'linear-gradient(90deg, #1f5e9e ' + pos + '%,#dbdcde ' + (pos+1) + '%)';
-
-
+                else  {
+                    grad = 'linear-gradient(90deg, #a1a1a1 ' + pos + '%,#dbdcde ' + (pos+1) + '%)';
+                }
 
                 $_input.css({'background': grad});
 
@@ -205,6 +187,6 @@
 
     $(function() {
 
-        $('.slider-range').WBslider();
+        $('.slider-range').CustomRangeSlider('unchecked');
 
     });
