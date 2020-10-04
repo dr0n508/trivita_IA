@@ -1,0 +1,120 @@
+//tables reflow
+
+.table-reflow {
+  width: 100%;
+  border-spacing: 0;
+  .btn-wide {
+    width: auto;
+    margin-bottom: 0;
+    padding: 14px 25px;
+  }
+  thead {
+    background: #f0f1f6;
+    tr {
+      th {
+        color: #aaaaaa;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 20px 5px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      border: none;
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+
+    }
+    td {
+      text-align: center;
+      border-bottom: solid 1px #d9dbe9;
+      padding: 20px 10px;
+      .td-value {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        border: solid 2px;
+        padding: 10px 15px;
+        border-radius: 5px;
+      }
+      .td-value.alert {
+        color: #ff5454;
+        background-color: #ffdddd;
+        border-color: #ff5454;
+      }
+      .td-value.normal {
+        color: #3ac95f;
+        background-color: #d8f4df;
+        border-color: #3ac95f;
+      }
+      .td-value.medium {
+        color: #ffc148;
+        background-color: #fff3da;
+        border-color: #ffc148;
+      }
+      &:last-child {
+        //text-align: center;
+      }
+    }
+    td.td-date {
+      font-size: 14px;
+      color: $text;
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* Force table to not be like tables anymore */
+  #table-results-summary table,
+  #table-results-summary thead,
+  #table-results-summary tbody,
+  #table-results-summary th,
+  #table-results-summary td,
+  #table-results-summary tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #table-results-summary thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #table-results-summary tr { border: 1px solid #ccc; }
+
+  #table-results-summary td {
+    /* Behave like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align:left;
+  }
+
+  #table-results-summary td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+  }
+
+  /*
+  Label the data
+  */
+  #table-results-summary td:before { content: attr(data-title); }
+}
