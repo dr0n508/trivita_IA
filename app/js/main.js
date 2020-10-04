@@ -126,20 +126,15 @@
                 thumbwidth = 30; // set this to the pixel width of the thumb
 
 
-            // set range max to current year
+            // set range max and min
             $_input.attr('max', $_max_value);
-            $('.value-max span', $_this).text($_max_value);
+            $_input.attr('min', $_min_value);
+            $('.value-max', $_this).text($_max_value);
+            $('.value-min .value-min-text', $_this).text($_min_value);
 
             $_input.on('input change keyup', function() {
                 var $_this = $(this),
                     val = parseInt($_input.val(), 10);
-
-                if (val < 30) {
-                    val = '< 31';
-                }
-                if (val === '') { // Stop IE8 displaying NaN
-                    val = 0;
-                }
 
                 if ( stateCheckbox === 'unchecked') {
                     $_current_value.text( val );
@@ -153,7 +148,7 @@
 
                 // position the title with the thumb
                 var thumbCorrect = thumbwidth * (pos - 0.5) * -1,
-                    titlepos = Math.round( ( pos * $_input.width() ) - thumbwidth/4 + thumbCorrect );
+                    titlepos = Math.round( ( pos * $_input.width() ) - thumbwidth + thumbCorrect ) +5;
 
                 $_current_value.css({'left': titlepos});
 
