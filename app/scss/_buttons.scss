@@ -166,4 +166,14 @@
   &:hover {
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
   }
+  @media (max-width: 768px) {
+    background-color: white;
+    padding-right: 15px;
+    .name-file, .size-file {
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 }

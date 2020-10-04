@@ -222,6 +222,14 @@ h1, h2, h3, h4 {
 			align-items: start;
 		}
 	}
+	.header-content.no-border {
+		border-bottom: none;
+		@media (max-width: 768px) {
+			margin-bottom: 20px;
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
 
 	justify-content: space-between;
 	.inner-content {
@@ -256,6 +264,13 @@ h1, h2, h3, h4 {
 
 .inner-wrapper.mb {
 	margin-bottom: 30px;
+}
+
+.inner-wrapper.no-bg-mobile {
+	@media (max-width: 768px) {
+		background: none;
+		box-shadow: none !important;
+	}
 }
 
 .inner-wrapper.rounded {

@@ -13,6 +13,17 @@
   justify-content: space-between;
 }
 
+.steps-block-btn-mobile.block-btn-final-page {
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    .button-labeled {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
 .progress-bar{
   display: flex;
   .step {
