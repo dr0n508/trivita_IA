@@ -127,7 +127,7 @@
                 thumbwidth = 30; // set this to the pixel width of the thumb
 
 
-            // set range max and min
+            // set range max, min and middle
             $_input.attr('max', $_max_value);
             $_input.attr('min', $_min_value);
             $_input.attr('middle', $_middle_value);
